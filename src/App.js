@@ -30,9 +30,10 @@ function App() {
 
   const addExpenseHandler = (expense) => {
     console.log(expense);
-    setNewExpenses((prevExpense) => {
-      return [expense, ...prevExpense];
-    });
+    // setNewExpenses((prevExpense) => {
+    //   return [expense, ...prevExpense];
+    // });
+    getData()
   };
 
   useEffect(() => {
@@ -48,7 +49,7 @@ function App() {
 
       for (const key in data) {
         console.log(data[key]);
-        fromFireBase.push({
+        fromFireBase.unshift({
           id: key,
           title: data[key].title,
           amount: data[key].amount,
