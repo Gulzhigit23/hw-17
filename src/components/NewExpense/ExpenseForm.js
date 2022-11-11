@@ -24,7 +24,7 @@ const ExpenseForm = (props) => {
   const postData = async (values) => {
     try {
       await fetch(
-        "https://hw-17-4d0a1-default-rtdb.firebaseio.com/hw-17.json",
+        "https://hw-17-18b52-default-rtdb.firebaseio.com/test.json",
         {
           method: "POST",
           body: JSON.stringify(values),
